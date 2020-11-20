@@ -28,12 +28,14 @@ class Config(object):
     WHITELIST_USERS = []  # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
     DONATION_LINK = None  # EG, paypal
     CERT_PATH = None
-    PORT = 5000
     DEL_CMDS = False  # Whether or not you should delete "blue text must click" commands
-    STRICT_GBAN = False
-    WORKERS = 8  # Number of subthreads to use. This is the recommended amount - see for yourself what works best!
+    STRICT_GBAN = True
     BAN_STICKER = 'CAADAgADOwADPPEcAXkko5EB3YGYAg'  # banhammer marie sticker
+    KICK_STICKER = False # StickerId while /kick ,same as BAN_STICKER
     ALLOW_EXCL = False  # Allow ! commands as well as /
+    API_OPENWEATHER = False #Get API_OPENWEATHER FROM OFFICAL SITE https://da.gd/VAW3
+    TEMPORARY_DATA = None # Temporary data for backup module, use int number
+    MAPS_API = ""
 
 
 class Production(Config):
