@@ -3,7 +3,7 @@ import re
 from typing import Optional, List
 
 from telegram import Message, Chat, Update, Bot, User
-from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
+from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, emoji
 from telegram.error import Unauthorized, BadRequest, TimedOut, NetworkError, ChatMigrated, TelegramError
 from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryHandler
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop
@@ -18,11 +18,9 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hello {}, my name is {}! if you have any questions about how to use me please give me /help... 
+Hello {}, my name is {}! Welcome :relaxed:... 
 
-im a group manager bot maintained by  [this person](tg://user?id={}).
-
-My future updates will be put into This Channel - @MarieChechi
+:eyes: i'm a group manager bot maintained by  [this person](tg://user?id={}).
 
 For more commands click /help...
 
@@ -37,8 +35,7 @@ Hello! my name *{}*.
  - /help: help....
  - /donate: To find out more about donating!
  - /settings:
-   - in PM: To find out what SETTINGS you have set....
-   - in a group:
+   - in PM: To find out what SETTINGS you can set in a group: ...
 
 {}
 And the following:
@@ -46,8 +43,7 @@ And the following:
 
 DONATE_STRING = """Hey!, glad to hear you want to donate!
 It took lots of work for [my creator](t.me/BlitzyWeb) to get me to where I am now, and every donation helps \
-motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \
-(see his bio!). He's just a poor student, so every little helps!
+motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \. He's just a nigerian student, so every little helps!
 There are one ways of paying him; [Tron Wallet](), or [Flutterwave](www.flutterwave.com/BlitzyWeb)."""
 
 IMPORTED = {}
